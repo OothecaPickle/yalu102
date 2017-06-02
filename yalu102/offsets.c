@@ -114,6 +114,10 @@ void init_offsets() {
         allproc_offset = 0x5b8468;
         rootvnode_offset = 0x5be0b8;
     }
+    else if (strcmp(u.version, "Darwin Kernel Version 16.3.0: Mon Nov  7 21:58:42 PST 2016; root:xnu-3789.30.92~36/RELEASE_ARM64_S8000") == 0) {
+        allproc_offset = 0x5a8438;
+        rootvnode_offset = 0x5ae0b8;
+    }
     else {
         printf("missing offset, prob crashing\n");
     }
